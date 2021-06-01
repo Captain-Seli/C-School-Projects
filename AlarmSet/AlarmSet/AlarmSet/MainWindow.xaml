@@ -1,0 +1,21 @@
+﻿<Window x:Class="AlarmSet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlarmSet"
+        mc:Ignorable="d"
+        Title="Remote Digital Clock Application" Height="300" Width="500">
+    <Grid Margin="0,0,0,-1">
+        <TextBox x:Name="hourBox" HorizontalAlignment="Left" Height="23" Margin="42,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Text="{Binding Path=Hours, StringFormat=d2}" />
+        <TextBox x:Name="minuteBox" HorizontalAlignment="Left" Height="23" Margin="177,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Text="{Binding Path=Minutes, StringFormat=d2}"/>
+        <TextBox x:Name="secondBox" HorizontalAlignment="Left" Height="23" Margin="312,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Text="{Binding Path=Seconds, StringFormat=d2}"/>
+        <Button x:Name="setTimeButton" Content="Set Time" HorizontalAlignment="Left" Margin="42,78,0,0" VerticalAlignment="Top" Width="75" Click="setTimeButton_Click"/>
+        <Button x:Name="nowTimeButton" Content="Current Time" HorizontalAlignment="Left" Margin="42,103,0,0" VerticalAlignment="Top" Width="75" Click="nowTimeButton_Click"/>
+        <Button x:Name="setAlarmButton" Content="Set Alarm" HorizontalAlignment="Left" Margin="42,128,0,0" VerticalAlignment="Top" Width="75" Click="setAlarmButton_Click"/>
+        <Label x:Name="hourLabel" Content="Hours" HorizontalAlignment="Left" Margin="42,18,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="minLabel" Content="Minutes" HorizontalAlignment="Left" Margin="177,18,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="secLabel" Content="Seconds" HorizontalAlignment="Left" Margin="312,18,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="displayTimeCheck" Content="Display 24 Hour Clock" HorizontalAlignment="Left" Margin="42,163,0,0" VerticalAlignment="Top" Width="145" IsChecked="{Binding CheckBox}"/>
+    </Grid>
+</Window>
